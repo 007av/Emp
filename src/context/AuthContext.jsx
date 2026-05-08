@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Children } from 'react'
 
-const AuthContext = () => {
+const AuthContext = ({children}) => {
   return (
     <div>
-      
+      {children}
     </div>
   )
 }
