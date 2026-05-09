@@ -260,14 +260,16 @@ const admin = [
 
 export const setLocolstorage = ()=>{
 
-  localStorage.setItem("employee",JSON.stringify(employees));
+  localStorage.setItem("employees",JSON.stringify(employees));
   localStorage.setItem("admin",JSON.stringify(admin));
 }
 
 export const getLocalstorage = ()=>{
- const employeeData = JSON.parse(localStorage.getItem("employee"));
- const admin = JSON.parse(localStorage.getItem('admin'));
+ const employeeData = JSON.parse(localStorage.getItem("employees"));
+ const adminData = JSON.parse(localStorage.getItem('admin'));
 
- console.log(employeeData,admin);
+//  console.log(employees,admin);
+
+ return{employeeData,adminData}
  
 }
