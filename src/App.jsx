@@ -10,6 +10,11 @@ const App = () => {
 
   const authData = useContext(AuthContext);
   console.log(authData);
+
+  if(authData){
+    const loggedInUser = localStorage.getItem('loggedInUser');
+  }
+
   
   
 
@@ -17,9 +22,11 @@ const App = () => {
     if (email == "admin@me.com" && password == "123") {
       setUser("admin");
       console.log("This is Admin");
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}));
     } else if ( authData && authData.employeeData.find((e)=> email == e.email && password == e.password)) {
       setUser("employee");
       console.log("This is Employee");
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'employee'}))
     } else {
       alert("Invalid Credentials..!");
     }
