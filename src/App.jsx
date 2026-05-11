@@ -10,10 +10,12 @@ const App = () => {
 
   const authData = useContext(AuthContext);
   console.log(authData);
-
-  if(authData){
+useEffect(()=>{
+if(authData){
     const loggedInUser = localStorage.getItem('loggedInUser');
   }
+},[authData])
+  
 
   
   
