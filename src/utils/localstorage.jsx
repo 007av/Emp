@@ -180,7 +180,7 @@ const employees = [
       active: 1,
       newTask: 1,
       completed: 1,
-      failed: 1
+      failed: 0
     },
 
     tasks: [
