@@ -5,9 +5,15 @@ import FailedTask from './FailedTask'
 import NewTask from './NewTask'
 
 const TaskList = ({data}) => {
+      if (!data || !data.tasks) {
+    return <div>No Tasks Available</div>
+  }
+  console.log(data);
+
   return (
     
       <div id='Tasklist' className='overflow-x-auto flex items-center justify-start gap-5 flex-nowrap rounded-xl w-full h-[53%] mt-10'>
+
 
        {
         data.tasks.map((elem)=>{
