@@ -10,7 +10,7 @@ const FailedTask = () => {
       <p className="text-xm  mt-7">
         Explain the process of creating a successful YouTube video.
       </p>
-      <div className="w-full mt-5">
+      <div className=" w-full mt-5">
         <button className=" bg-red-500 rounded text-sm p-3">
           Task Failed
         </button>
